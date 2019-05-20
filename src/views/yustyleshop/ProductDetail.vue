@@ -173,6 +173,7 @@ export default {
 // ------------------------------
 @media screen and (max-width: 767.98px)
   #product_detail
+    padding: 50px 0 0 0
     .row
       .col-md-5
         &:nth-child(1)

@@ -63,8 +63,7 @@ export default {
     &:hover
       background-color: darken($c_green, 20)
     input
-      appearance: none
-      cursor: pointer
+      display: none
     span
       font-size: 1rem
       color: white

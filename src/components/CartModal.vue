@@ -211,4 +211,25 @@ export default {
               transition: 0.4s
               &:hover
                 background-color: darken($c_green, 20)
+
+// ====================
+//      RWD
+// ==============================
+
+// --------------------
+//      MOBILE
+// ------------------------------
+@media screen and (max-width: 767.98px)
+  #cart_modal
+    .modal-dialog
+      .modal-content
+        .modal-footer
+          .line_02
+            .price_box
+              +center_flex(flex-start)
+              .total_box
+                &:nth-child(1)
+                  margin: 0 20px 0 0
+            .button_box
+              right: -30px
 </style>

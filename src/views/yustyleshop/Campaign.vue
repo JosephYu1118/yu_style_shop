@@ -153,14 +153,13 @@ export default {
           &[data-order="#{$i}"]
             left: 50%
             z-index: 1
-            transform: rotate(360deg) translate(-50%, 200%) rotate(0) rotateY(180deg)
+            transform: rotate(360deg) translate3d(-50%, 200%, 120px) rotate(0) rotateY(180deg)
       .face
         +size(100%, 100%, 10px)
         background-color: $c_green
         +center_position
         backface-visibility: hidden
         overflow: hidden
-        pointer-events: none
         &.back
           transform: translate(-50%, -50%) rotateY(180deg)
         &.front

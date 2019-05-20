@@ -85,8 +85,7 @@ export default {
             font-weight: 700
             color: $c_yellow
         input
-          appearance: none
-          cursor: pointer
+          display: none
         i, span
           font-size: 0.7rem
           color: darken(white, 50)
