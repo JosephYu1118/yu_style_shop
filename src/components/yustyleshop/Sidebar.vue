@@ -105,7 +105,7 @@ export default {
 // ==============================
 
 // --------------------
-//      MOBILE
+//      LARGE MOBILE
 // ------------------------------
 @media screen and (max-width: 575.98px)
   #sidebar

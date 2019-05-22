@@ -152,7 +152,7 @@ export default {
 // ==============================
 
 // --------------------
-//      TABLET
+//      SMALL DESKTOP
 // ------------------------------
 @media screen and (max-width: 991.98px)
   .navbar

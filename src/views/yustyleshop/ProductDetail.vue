@@ -169,7 +169,7 @@ export default {
 // ==============================
 
 // --------------------
-//      MOBILE
+//      TABLET
 // ------------------------------
 @media screen and (max-width: 767.98px)
   #product_detail

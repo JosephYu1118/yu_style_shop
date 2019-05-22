@@ -115,9 +115,20 @@ export default {
 // ==============================
 
 // --------------------
-//      MOBILE
+//      LARGE MOBILE
 // ------------------------------
 @media screen and (max-width: 575.98px)
   #orders
     padding: 50px 0
+    table
+      thead
+        tr
+          th
+            &:nth-child(3), &:nth-child(4)
+              display: none
+      tbody
+        tr
+          td
+            &:nth-child(3), &:nth-child(4)
+              display: none
 </style>

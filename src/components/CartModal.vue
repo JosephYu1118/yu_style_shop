@@ -35,8 +35,8 @@
                   i.fas.fa-spinner.fa-spin(v-if="loadingItem === item.id")
                   i.far.fa-trash-alt(v-else)
       .modal-footer
-        .line_01
-          .coupon_box.input-group.input-group-sm
+        .row
+          .coupon_box.col-sm-8.input-group.input-group-sm
             input.form-control(type="text"
                                 placeholder="輸入優惠碼"
                                 v-model="coupon_code")
@@ -44,15 +44,14 @@
               button.btn_use_coupon.btn(type="button"
                                         @click="submitCoupon({ code: coupon_code })")
                 span 套用
-        .line_02
-          .price_box
+          .price_box.col-sm-12
             .total_box
               span 總計:
               .total {{ getTotal | currency }}
             .total_box(v-if="getTotal !== getFinalTotal")
               span 套用優惠券:
               .total.final {{ getFinalTotal | currency }}
-          .button_box
+          .button_box.col-sm-12
             button.btn_checkout.btn(@click="goCheckout(p_route)") 結帳
 </template>
 
@@ -126,6 +125,7 @@ export default {
                 border-top: 0
                 border-bottom: 1px solid rgba(white, 0.8)
                 text-align: center
+                word-break: keep-all
                 color: $c_blue
           tbody
             .empty
@@ -161,14 +161,13 @@ export default {
                   color: $c_red
                   transition: 0.4s
       .modal-footer
-        +center_flex
-        flex-direction: column
-        .line_01
+        .row
           width: 100%
-          margin: 0 0 15px 0
-          +center_flex(flex-start)
+          margin: 0
+          .col-sm-8, .col-sm-12
+            padding: 5px 0
           .coupon_box
-            width: 250px
+            max-width: 300px
             input
               border-radius: 10px 0 0 10px
               &::placeholder
@@ -183,16 +182,16 @@ export default {
                 transition: 0.4s
                 &:hover
                   background-color: darken($c_green, 20)
-        .line_02
-          width: 100%
           .price_box
-            width: 300px
-            +center_flex(space-between)
+            +center_flex(flex-start)
             .total_box
               +center_flex
+              &:nth-child(1)
+                margin: 0 30px 0 10px
               span
                 margin: 0 10px 0 0
                 font-size: 0.9rem
+                word-break: keep-all
               .total
                 font-size: 0.9rem
                 font-weight: 700
@@ -200,10 +199,7 @@ export default {
                 &.final
                   color: $c_red
           .button_box
-            +center_position
-            top: 40%
-            right: -20px
-            left: auto
+            +center_flex(flex-end)
             .btn_checkout
               border-radius: 10px
               background-color: $c_green
@@ -217,19 +213,43 @@ export default {
 // ==============================
 
 // --------------------
-//      MOBILE
+//      TABLET
 // ------------------------------
 @media screen and (max-width: 767.98px)
   #cart_modal
     .modal-dialog
       .modal-content
+        .modal-body
+          padding: 20px 10px
+          table
+            thead
+              tr
+                th
+                  &:nth-child(1)
+                    display: none
+            tbody
+              .item
+                td
+                  padding: 10px 0
+                .thumbnail
+                  display: none
+
+// --------------------
+//      SMALL MOBILE
+// ------------------------------
+@media screen and (max-width: 349.98px)
+  #cart_modal
+    .modal-dialog
+      .modal-content
         .modal-footer
-          .line_02
+          .row
+            .coupon_box
+              max-width: 250px
             .price_box
-              +center_flex(flex-start)
+              padding: 10px
+              +center_flex(center, flex-start)
+              flex-direction: column
               .total_box
                 &:nth-child(1)
-                  margin: 0 20px 0 0
-            .button_box
-              right: -30px
+                  margin: 0 0 5px 0
 </style>

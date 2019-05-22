@@ -203,7 +203,7 @@ export default {
 // ==============================
 
 // --------------------
-//      TABLET
+//      SMALL DESKTOP
 // ------------------------------
 @media screen and (max-width: 991.98px)
   #content
@@ -212,7 +212,7 @@ export default {
         flex-direction: column
 
 // --------------------
-//      MOBILE
+//      MEDIUM MOBILE
 // ------------------------------
 @media screen and (max-width: 419.98px)
   #content

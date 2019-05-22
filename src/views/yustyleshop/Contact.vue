@@ -128,11 +128,11 @@ export default {
 // ==============================
 
 // --------------------
-//      TABLET
+//      SMALL DESKTOP
 // ------------------------------
 @media screen and (max-width: 991.98px)
   #contact
-    .name_box, .email_box, .topic_box, .comment_box
+    [class *= "box"]
       label
         left: 8%
 </style>

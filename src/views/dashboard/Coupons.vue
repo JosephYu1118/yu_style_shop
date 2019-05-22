@@ -246,9 +246,13 @@ export default {
 // ==============================
 
 // --------------------
-//      MOBILE
+//      LARGE MOBILE
 // ------------------------------
 @media screen and (max-width: 575.98px)
   #coupons
     padding: 50px 0
+    .coupons
+      .coupon_ticket
+        margin: 10px 0
+        transform: scale(0.9)
 </style>

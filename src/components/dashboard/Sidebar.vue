@@ -115,7 +115,7 @@ export default {
 // ==============================
 
 // --------------------
-//      MOBILE
+//      LARGE MOBILE
 // ------------------------------
 @media screen and (max-width: 575.98px)
   #dashboard_sidebar
@@ -155,7 +155,7 @@ export default {
 // --------------------
 //      SMALL MOBILE
 // ------------------------------
-@media screen and (max-width: 329.98px)
+@media screen and (max-width: 349.98px)
   #dashboard_sidebar
     .sidebar-sticky
       .links_box
